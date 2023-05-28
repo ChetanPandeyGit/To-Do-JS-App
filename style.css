@@ -1,0 +1,250 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color:black;
+    text-align: center;
+}
+.container{ 
+    width: 80vw;
+    height: 20vh;
+    margin:2rem 0 0 8rem;
+    position:relative;
+    color: white;
+    
+}
+.mainHeader{
+    height:8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:3rem 0 0 0;
+}
+.leftMainHeader{
+    font-size:3rem;
+    font-weight:500;
+    color: white;
+}
+.mainHeader #headerSpan{
+  font-weight:100;
+  color:white;
+}
+#rightMainHeader{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+#rightMainHeader> p{
+  font-size:2rem;
+  color:white;
+}
+.fa-plus-circle{
+    color: rgba(25, 66, 179, 0.801);
+    font-size:2.5rem;    
+}
+#mainContainer{
+  margin:0.2rem 3rem 0 10rem;
+  width:80%;
+  height:100%;
+  overflow-x: hidden;
+  display:flex;
+  align-items:center;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.popUpWin {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+.addTaskWin{
+  display:none;
+}
+.addItemWin{
+  display:none;
+}
+.hide{
+  display: none;
+}
+.addWindow{
+  width:30rem;
+  height:15rem;
+  position:absolute;
+  bottom:0;
+  left:0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background-color: white;
+  border:2px solid rgba(255, 0, 30, 0.801);
+  border-radius:1rem;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;   
+}
+.winTitle{
+    font-size:1.5rem;
+    color: rgba(255, 0, 30, 0.801);
+}
+.addWindow > p ~ input[type=text]{
+    width:20rem;
+    height:2.5rem;
+    border:2px solid rgba(255, 0, 30, 0.801);
+    border-radius:0.5rem;
+    margin:0.5rem 0 1rem 0;
+    box-shadow:0.1rem 0.1rem 0.3rem 0.09rem rgb(211, 211, 211);
+}
+.taskButton,.itemButton{
+  width:6.5rem;
+  height:2.6rem;
+  background-color:rgba(255, 0, 30, 0.801);
+  color: white;
+  border:0;
+  border-radius:1.2rem;
+  font-size:1.4rem;
+  cursor: pointer;
+}
+.closeWin {
+  position: absolute;
+  top: 0.5rem;
+  right:1rem;
+  font-size:2rem;
+  color: rgba(255, 0, 30, 0.801);
+  cursor: pointer;
+  border:hidden;
+  background: none;
+}
+.cards{
+  width:17rem;
+  height:22rem;
+  border:2px solid rgba(255, 0, 30, 0.801);;
+  margin:0.5rem 0.25rem 2.5rem 0.25rem;
+  border-radius:1rem;
+  background-color: white;
+  box-shadow:0.6rem 0.6rem 0.8rem 0.1rem rgba(255, 0, 30, 0.801);
+}
+.cards>p:first-child{
+  font-size:1.5rem;
+  color: rgba(255, 0, 30, 0.801);
+  text-align: center;
+  margin:0.8rem 0 0.5rem 0;
+  max-height: 4rem;
+}
+.cards>hr{
+  width:100%;
+  border:1px solid grey;
+}
+.itemList{
+  width:17rem;
+  height:15rem;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  margin:auto;
+  color:rgba(255, 0, 30, 0.801);
+  font-size:1.5rem;
+  letter-spacing:.5px;
+  overflow: hidden; 
+}
+.optionDiv{
+  display:flex;
+  position: relative;
+  top:-2rem;
+  left:12rem;
+}
+.cardAddBtn{
+  color:#1976d2;
+  font-size:1.8rem;
+  display:absolute;
+  cursor: pointer;
+}
+.cardDelBtn{
+  color:rgba(255, 0, 30, 0.801);
+  font-size:1.8rem;
+  margin:0 0 0 0.5rem;
+  cursor: pointer;
+}
+.itemList > p {
+  cursor: pointer;
+}
+.nothing{
+  color:white;
+  opacity:70%;
+  position: absolute;
+  top: 200px;
+  left: 340px;
+  font-size:2.5rem;
+}
+.title{
+  cursor: pointer;
+  overflow: hidden;
+}
+.innerPageContent{
+  margin: 10rem auto 0 auto;
+}
+#innerWindowHeader{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  position: relative;
+  top:-30rem;
+  font-size:2.5rem;
+  margin-bottom: 2rem;
+}
+.innerBackButton{
+  color:rgba(255, 0, 30, 0.801);
+  cursor:pointer;
+}
+.innerPageTitle{
+  color:rgba(255, 0, 30, 0.801);
+  font-size:2rem;
+  max-width: 20rem;
+  max-height: 7rem;
+  overflow: hidden;
+}
+.innerAddTaskButton{
+    color:#1976d2;
+    cursor:pointer;
+}
+.inputTaskTitle,.inputItemTitle{
+  text-align:center;
+  font-size:1.2rem;
+  color:rgba(255, 0, 30, 0.801);
+}
+@media(max-width: 720px){
+  #mainContainer{
+    flex-direction: column;
+  }
+  .innerPageTitle{
+    display: none;
+  }
+  #innerWindowHeader{
+    justify-content: space-between;
+  }
+  .innerBackButton{
+    margin: 2rem;
+  }
+} 
+@media(max-width: 540px){
+  .container{     
+    margin:.5rem 0 0 3rem;    
+}
+#mainContainer{
+  margin: auto;
+}
+.addWindow{
+  width:20rem;
+  height:10rem;
+}
+}

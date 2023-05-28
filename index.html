@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do JS Project</title>
+    <link rel="stylesheet" href="style.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="mainHeader" >
+            <div class="leftMainHeader">
+                <p>Tasks<span id="headerSpan"> List</span></p>
+            </div>
+            <div id="rightMainHeader">
+                <p><i class="fas fa-plus-circle "></i> Add Task</p>
+            </div>
+        </div>
+    </div>
+    <p class='nothing'>There are no tasks in To Do list</p>
+    <div id="mainContainer"></div> 
+    
+    <div class="popUpWin addTaskWin">
+        <div class="addWindow">
+            <button class="closeWin" onclick="closeTaskWin()">&times;</button>
+            <p class="winTitle">Add New List</p>
+            <input type="text" class="inputTaskTitle" placeholder="Add New Task">
+            <input type="button" value="ADD" class="taskButton">
+        </div>
+    </div>
+    <div id="innerWindowHeader" class="popUpWin" >
+        <p class="innerBackButton"><i class="fas fa-arrow-circle-left"></i> Back</p>
+        <p class="innerPageTitle"></p>
+        <i class="fas fa-plus-circle innerAddTaskButton"></i>
+    </div>
+    <div class="popUpWin addItemWin">
+        <div class="addWindow">
+            <button class="closeWin" onclick="closeItemWin()">&times;</button>
+            <p class="winTitle">Add New Item</p>
+            <input type="text" class="inputItemTitle" placeholder="Add New Item">
+            <input type="button" value="ADD" class="itemButton">
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/90bc066b2e.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
